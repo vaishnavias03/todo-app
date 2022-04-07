@@ -1,0 +1,30 @@
+
+.delete-todo, .update-todo, .status{
+    --button-color: rgb(186, 222, 226);
+    border: none;
+    float: right;
+    background-color: var(--button-color);
+    padding-left: 2%;
+    font-size: x-large;
+}
+.delete-todo:hover{
+    color: rgb(221, 12, 12);
+}
+.update-todo:hover{
+    color:rgb(45, 167, 189);
+}
+.status:hover{
+    color: rgb(9, 155, 9);
+}
+.list-wrapper > p{
+    padding: 2%;
+    border-color: black;
+    background-color: rgb(186, 222, 226);
+    color: black;
+    border-radius: 20px;
+    font-size: large;
+}
+
+.text-for-completed{
+    text-decoration:line-through;
+}

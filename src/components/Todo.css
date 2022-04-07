@@ -1,0 +1,52 @@
+
+
+.input-tag{
+    
+    padding: 1.5%;
+    width: 62%;
+    color: rgb(8, 1, 1);
+    background-color: rgb(149, 228, 195);
+    border-radius: 20px;
+}
+.input-tag:focus{
+    background-color: white;
+}
+
+.add-button{
+    padding: 1.5%;
+    margin: 4%;
+    background-color: rgb(233, 156, 111);
+    font-size: medium;
+    border-radius: 20px;
+    width: 25%;
+    box-shadow: 9px 10px 5px 0px rgba(41, 39, 39, 0.75);
+
+}
+.add-button:hover{
+    background-color: rgb(17, 16, 16);
+    color: rgb(252, 250, 247);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+.category-selector{
+    padding: 1.5%;
+    font-size: medium;
+    background-color: rgb(240, 203, 161);
+    border-radius: 20px;
+    width: 30%;
+}
+
+.category-selector:hover{
+    background-color: rgb(222, 243, 236);
+    transition-duration: 0.5s;
+}
+
+.todo-wrapper{
+    background-color: rgb(196, 248, 216);
+    padding: 4%;
+    border-radius: 50px;
+    margin-top: 2%;
+    cursor:text;
+}
+
