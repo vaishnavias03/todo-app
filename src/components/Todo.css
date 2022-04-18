@@ -1,7 +1,5 @@
-
-
 .input-tag{
-    
+    font-size: large;
     padding: 1.5%;
     width: 62%;
     color: rgb(8, 1, 1);
@@ -16,7 +14,6 @@
     padding: 1.5%;
     margin: 4%;
     background-color: rgb(233, 156, 111);
-    font-size: medium;
     border-radius: 20px;
     width: 25%;
     box-shadow: 9px 10px 5px 0px rgba(41, 39, 39, 0.75);
@@ -31,7 +28,6 @@
 }
 .category-selector{
     padding: 1.5%;
-    font-size: medium;
     background-color: rgb(240, 203, 161);
     border-radius: 20px;
     width: 30%;
@@ -48,5 +44,20 @@
     border-radius: 50px;
     margin-top: 2%;
     cursor:text;
+    border: 3px solid black;
 }
+@media (width: 1006px) {
+    .wrapper{
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+  }
+  @media (min-width: 1300px) {
+    .wrapper{
+        margin-left: 15em;
+        margin-right: 15em;
+    }
+    
+  }
+  
 

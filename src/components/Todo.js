@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { ReactDOM } from "react";
 import TodoList from "./TodoList";
-import { FcPlus } from "react-icons/fc";
-import { IconContext } from "react-icons";
-
 import "./Todo.css"
-
 
 
 const TodoInput =() =>{
     const [inputText, setInputText] = useState("");
     const [listItem, setItem] = useState([]);
-    const TodoStatus = false;
-    const [status, setStatus] = useState(false);
     const [category, setCategory] = useState("all");
     const [filter, setFilter] = useState([]);
 
@@ -27,7 +20,6 @@ const TodoInput =() =>{
         }else{
             setItem([...listItem, {item: inputText, key: Math.random(1000*0.1111), status: false}]);
             setInputText("");
-            console.log(listItem);
         }
     }
     const CategoryChangeHandler =(e)=>{
@@ -38,7 +30,6 @@ const TodoInput =() =>{
             switch(category){
               case 'Completed':
                 setFilter(listItem.filter((items) => items.status === true))
-                console.log("Status change to completed")
                 break
               case 'In Progress':
                 setFilter(listItem.filter((items) => items.status === false))
@@ -46,7 +37,6 @@ const TodoInput =() =>{
                 break
               default:
                 setFilter(listItem)
-                console.log("Status change to all")
             }
             
     }
@@ -67,8 +57,7 @@ const TodoInput =() =>{
             </select>
         </div>
         <div className="todos">
-            <TodoList filteredItem ={filter} item={listItem} setItem={setItem} text={inputText} setText={setInputText} status={status} TodoStatus={TodoStatus}
-            setStatus={setStatus}/>
+            <TodoList filteredItem ={filter} item={listItem} setItem={setItem} text={inputText} setText={setInputText}/>
         </div>
     </div>
     );

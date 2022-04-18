@@ -1,5 +1,4 @@
 import React from "react";
-import  { useState } from "react";
 import "./TodoList.css"
 import { FcOk } from "react-icons/fc";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
@@ -8,7 +7,7 @@ import {AiFillCheckCircle} from "react-icons/ai";
 
 
 
-const TodoList = ({filteredItem, text, setText, item, setItem, status, TodoStatus, setStatus}) =>{
+const TodoList = ({filteredItem, text, setText, item, setItem}) =>{
 
     const Delete = (items) =>{
         setItem(item.filter(element => element.key !==  items.key))
@@ -60,10 +59,13 @@ return(
             {filteredItem.map((element) =>{
         return(
            <div className="list-wrapper">
-                <p><span className={element.status ? "text-for-completed" : "text"}>{element.item}</span>
+                <p className={element.status ? "text-for-completed" : "text"}>{element.item}</p>
+                <div className="buttons-wrapper">
                 <button className="delete-todo" onClick={() => DeleteTodo(element)}><FaTrashAlt/></button>
                 <button className="update-todo" onClick={() => UpdateTodo(element)}><FaEdit/></button>
-                <button className="status" onClick={() => UpdateStatus(element)}>{element.status ? <FcOk/> : <AiFillCheckCircle/>}</button></p>
+                <button className="status" onClick={() => UpdateStatus(element)}>{element.status ? <FcOk/> : <AiFillCheckCircle/>}</button>
+                </div>
+                
            </div>
         );        
     })}
